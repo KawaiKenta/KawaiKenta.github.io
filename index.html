@@ -1,17 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
+    <link rel="stylesheet" href="style.css" />
     <title>Portfolio</title>
-
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="stylesheet" href="/global.css" />
-    <link rel="stylesheet" href="/build/bundle.css" />
-
-    <script defer src="/build/bundle.js"></script>
   </head>
+  <body>
+    <header class="header">
+      <div class="cite">Kawai Kenta</div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#hero">HOME</a></li>
+          <li><a href="#project">PROJECTS</a></li>
+          <li><a href="#skill">SKILLS</a></li>
+        </ul>
+      </nav>
 
-  <body></body>
+      <button type="button" class="nav-button" onClick="openNav()">
+        <span class="sr-only">MENU</span>
+      </button>
+    </header>
+    <section class="hero" id="hero">
+      <div class="message">
+        <h2>Kawai Kenta</h2>
+        <p>
+          Computer Science B4 / Nagoya University<br />
+          I have a part-time job working as a system engineer
+        </p>
+      </div>
+    </section>
+
+    <section class="projects title" id="project">
+      <h2>PROJECTS</h2>
+      <div class="project go">
+        <h3>Go lang を用いたRESTful API</h3>
+        <div class="content">
+          <figure>
+            <img src="assets/gopro.png" alt="goプロジェクト" />
+          </figure>
+          <p>
+            Go言語を用いてRESTfulAPIサーバーを作成しました。Goの有名ライブラリであるGinを
+            使用しており、高速に動作します。JWT
+            Tokenによる認証系を備えており、ユーザー登録から
+            ログイン、退会まで行えます。また設定ファイルの情報によって動作を変更でき、
+            接続するデータベースや開放するポート、開発・リリースモード切り替えを簡単に行うことが
+            できます。
+          </p>
+        </div>
+      </div>
+
+      <div class="project portfolio">
+        <h3>ポートフォリオ</h3>
+        <div class="content reverse">
+          <figure>
+            <img src="assets/portfolio.png" alt="goプロジェクト" />
+          </figure>
+          <p>
+            このサイトです。流石に一通りは勉強しておこうということでHTMLとCSSを軽くやったので、
+            実践として作成しました。flexboxを利用してレスポンシブデザインにしています。
+            jQueryやbootstrapといったフレームワークを使わず全て自力で実装してみました
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills title" id="skill">
+      <h2>SKILLS</h2>
+
+      <div class="languages">
+        <h3>LANGUAGES</h3>
+        <ul>
+          <li><img src="assets/go-logo.png" alt="go" /></li>
+          <li><img src="assets/rust-logo.png" alt="rust" /></li>
+          <li><img src="assets/python-logo.png" alt="python" /></li>
+          <li><img src="assets/dart-logo.png" alt="dart" /></li>
+          <li><img src="assets/javascript-logo.png" alt="javascript" /></li>
+        </ul>
+      </div>
+      <div class="framework">
+        <h3>FRAMEWORKS</h3>
+        <ul class="items">
+          <li>
+            <div class="skillbox vue3">
+              <h4>Vue3</h4>
+              <span class="percentage">70%</span>
+              <div class="cover">
+                <div class="progressbar" style="width: 70%"></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="skillbox svelte">
+              <h4>Svelte</h4>
+              <span class="percentage">60%</span>
+              <div class="cover">
+                <div class="progressbar" style="width: 60%"></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="skillbox gin">
+              <h4>Gin (golang)</h4>
+              <span class="percentage">90%</span>
+              <div class="cover">
+                <div class="progressbar" style="width: 90%"></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="skillbox code3">
+              <h4>Codeigniter3</h4>
+              <span class="percentage">70%</span>
+              <div class="cover">
+                <div class="progressbar" style="width: 70%"></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="skillbox code4">
+              <h4>Codeigniter4</h4>
+              <span class="percentage">60%</span>
+              <div class="cover">
+                <div class="progressbar" style="width: 60%"></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="skillbox flutter">
+              <h4>Flutter</h4>
+              <span class="percentage">60%</span>
+              <div class="cover">
+                <div class="progressbar" style="width: 60%"></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tools">
+        <h3>TOOLS</h3>
+        <ul class="items">
+          <li>
+            <div class="skillbox vscode">
+              <h4>VScode</h4>
+              <span class="percentage">100%</span>
+              <div class="cover">
+                <div class="progressbar" style="width: 100%"></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="skillbox arduino">
+              <h4>arduino IDE</h4>
+              <span class="percentage">70%</span>
+              <div class="cover">
+                <div class="progressbar" style="width: 70%"></div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="skillbox vue3">
+              <h4>Git/Github</h4>
+              <span class="percentage">90%</span>
+              <div class="cover">
+                <div class="progressbar" style="width: 90%"></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <footer class="footer">COPYRIGHT @ KawaiKenta</footer>
+    <script>
+      function openNav() {
+        document.querySelector("html").classList.toggle("open");
+      }
+
+      const smoothScrollTrigger = document.querySelectorAll('a[href^="#"]');
+      for (let i = 0; i < smoothScrollTrigger.length; i++) {
+        smoothScrollTrigger[i].addEventListener("click", (e) => {
+          e.preventDefault();
+          openNav();
+          let href = smoothScrollTrigger[i].getAttribute("href");
+          let targetElement = document.getElementById(href.replace("#", ""));
+          const rect = targetElement.getBoundingClientRect().top;
+          const gap = targetElement.style.marginTop;
+          window.scrollTo({
+            top: rect,
+            behavior: "smooth",
+          });
+        });
+      }
+    </script>
+  </body>
 </html>
